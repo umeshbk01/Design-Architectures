@@ -9,7 +9,7 @@ public class FourWheelerSpot implements ParkingSpotFactory{
 
     @Override
     public ParkingSpot createParkingSpot(int spotId, Map<Integer, Integer> distancesFromEntrances) {
-        return new ParkingSpot(spotId, VehicleType.TWO_WHEELER, distancesFromEntrances);
+        return new ParkingSpot(spotId, VehicleType.FOUR_WHEELER, distancesFromEntrances);
     }
 
 

@@ -9,7 +9,7 @@ public class ElevatorCar {
     InternalButtons internalButtons;
     public ElevatorState elevatorState;
     int currentFloor;
-    Direction direction;
+    public Direction direction;
     ElevatorDoor elevatorDoor;
 
     public ElevatorCar(){

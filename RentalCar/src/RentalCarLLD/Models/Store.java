@@ -6,9 +6,13 @@ import java.util.List;
 import RentalCarLLD.Constants.VehicleType;
 
 public class Store {
-        int storeId;
+
+    public int storeId;
     VehicleInventoryManagement inventoryManagement;
     Location storeLocation;
+    List<Reservation> reservations = new ArrayList<>();
+
+
 
 
     public List<Vehicle> getVehicles(VehicleType vehicleType) {
@@ -23,6 +27,14 @@ public class Store {
     public void setVehicles(List<Vehicle> vehicles) {
         inventoryManagement = new VehicleInventoryManagement(vehicles);
     }
+
+    public Reservation createReservation(Vehicle vehicle, User user){
+        Reservation reservation = new Reservation();
+        reservation.createReserve(user,vehicle);
+        reservations.add(reservation);
+        return reservation;
+    }
+
 
     public boolean completeReservation(int reservationID) {
 

@@ -1,0 +1,22 @@
+package LLDSnakeNLadder.Models;
+
+import java.util.concurrent.ThreadLocalRandom;
+
+
+public class Dice {
+    public int diceCount;
+    int min=1;
+    int max=6;
+    public Dice(int diceCount){
+        this.diceCount=diceCount;
+    }
+    public int rolldice(){
+        int totalSum=0;
+        int diceUsed=0;
+        while (diceUsed<diceCount) {
+            totalSum += ThreadLocalRandom.current().nextInt(min,max+1);
+            diceUsed++;
+        }
+        return totalSum;
+    }
+}

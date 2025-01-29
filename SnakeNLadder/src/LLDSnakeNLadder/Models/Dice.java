@@ -10,7 +10,7 @@ public class Dice {
     public Dice(int diceCount){
         this.diceCount=diceCount;
     }
-    public int rolldice(){
+    public int rollDice(){
         int totalSum=0;
         int diceUsed=0;
         while (diceUsed<diceCount) {

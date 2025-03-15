@@ -2,6 +2,11 @@ package LLDVendingMachine.VendingStates.Impl;
 
 import java.util.List;
 
+import LLDVendingMachine.Constants.Coin;
+import LLDVendingMachine.Models.Item;
+import LLDVendingMachine.Models.VendingMachine;
+import LLDVendingMachine.VendingStates.State;
+
 public class HasMoneyState implements State {
 
     public HasMoneyState(){
@@ -9,7 +14,7 @@ public class HasMoneyState implements State {
     }
 
     @Override
-    public void clickOnInsertCoinButton(VendingMachine machine) throws Exception {
+    public void clickOnInsertCoin(VendingMachine machine) throws Exception {
         return;
     }
 

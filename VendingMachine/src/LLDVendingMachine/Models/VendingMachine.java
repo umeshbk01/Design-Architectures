@@ -3,6 +3,10 @@ package LLDVendingMachine.Models;
 import java.util.ArrayList;
 import java.util.List;
 
+import LLDVendingMachine.VendingStates.State;
+import LLDVendingMachine.VendingStates.Impl.IdleState;
+import LLDVendingMachine.Services.Inventory;
+import LLDVendingMachine.Constants.Coin;
 
 
 public class VendingMachine {

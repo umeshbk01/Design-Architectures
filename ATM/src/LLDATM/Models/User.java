@@ -1,7 +1,7 @@
 package LLDATM.Models;
 
 public class User {
-    Card card;
+    public Card card;
     UserBankAccount bankAccount;
 
     public Card getCard() {

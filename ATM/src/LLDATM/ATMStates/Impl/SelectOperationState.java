@@ -14,10 +14,10 @@ public class SelectOperationState extends State{
     public void selectOperation(ATM atm, Card card, TransactionType type){
         switch (type) {
             case CASH_WITHDRAWAL:
-                atm.setCurrentState(null);
+                atm.setCurrentState(new CashWithdrawalState());
                 break;
             case BALANCE_CHECK:
-                atm.setCurrentState(null);
+                atm.setCurrentState(new CheckBalanceState());
                 break;
             default:
                 System.out.println("Invalid Option");

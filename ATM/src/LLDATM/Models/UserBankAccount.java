@@ -1,7 +1,7 @@
 package LLDATM.Models;
 
 public class UserBankAccount {
-    int balance;
+    public int balance;
 
     public void withdrawalBalance(int amount) {
         balance = balance - amount;

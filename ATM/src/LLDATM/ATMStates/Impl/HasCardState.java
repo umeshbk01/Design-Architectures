@@ -13,7 +13,7 @@ public class HasCardState extends State{
     public void authenticatePin(ATM atm, Card card, int pin){
         boolean authPin = card.isCorrectPINEntered(pin);
         if(authPin){
-            atm.setCurrentState(null);
+            atm.setCurrentState(new SelectOperationState());
         }else{
             System.out.println("Invalid PIN Number");
             exit(atm);

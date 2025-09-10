@@ -15,7 +15,7 @@ public class SyncService {
 
     public Op publishOp(String userId, String fileId, String versionId, String opType){
         long seq = seqGen.getAndIncrement();
-        Op op = new Op(seq, userId, fileId, opType);
+        Op op = new Op(seq, userId, fileId, versionId, opType);
         userOpLogs.computeIfAbsent(userId, k -> Collections.synchronizedList(new ArrayList<>())).add(op);
         System.out.println("[SyncService] published " + op);
         return op;

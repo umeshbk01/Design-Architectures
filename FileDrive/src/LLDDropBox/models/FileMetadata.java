@@ -1,5 +1,6 @@
 package LLDDropBox.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FileMetadata {
@@ -14,6 +15,7 @@ public class FileMetadata {
         this.fileId = fileId;
         this.fileName = fileName;
         this.ownerId = ownerId;
+        this.versionIds = new ArrayList<>();
         this.modifiedAt = System.currentTimeMillis();
     }
 }

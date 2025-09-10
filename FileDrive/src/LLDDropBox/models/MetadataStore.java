@@ -25,6 +25,8 @@ public class MetadataStore {
         FileMetadata metadata = files.get(version.fileId);
         if(metadata != null){
             synchronized (metadata){
+        System.out.println("[MetadataStore] Metadata for version: " + metadata.currentVersionId);
+
                 metadata.versionIds.add(version.versionId);
                 metadata.currentVersionId = version.versionId;
                 metadata.modifiedAt = System.currentTimeMillis();
